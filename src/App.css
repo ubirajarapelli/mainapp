@@ -1,0 +1,8 @@
+#main {
+    display: inline-flex;
+    width: 70%;
+}
+#tray-app{
+    display: inline-flex;
+    width: 30%;
+}
