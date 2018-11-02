@@ -18,3 +18,4 @@ yarn.lock
 .history
 .vscode/
 .gitmodules
+.DS_Store
