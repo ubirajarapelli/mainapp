@@ -4,5 +4,6 @@
 }
 #tray-app{
     display: inline-flex;
-    width: 30%;
+    width: 29%;
+    border-left: thin solid red;
 }

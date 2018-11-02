@@ -10,10 +10,18 @@ class App extends Component {
         console.log('componentDidCatch');
     }
 
+    setTrayValue() {
+        const event = new Event('setTrayValue');
+        window.dispatchEvent(event);
+    }
+    
+
     render(){
         return(
             <div className="app">
-                <div id="main"></div>
+                <div id="main">
+                    <button onClick={this.setTrayValue}>go To tray</button>
+                </div>
                 <div id="tray-app" />
             </div>
         )
