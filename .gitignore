@@ -7,6 +7,9 @@
 # dependencies
 /node_modules
 
+# othres
+package-lock.json
+
 # misc
 /.sass-cache
 /connect.lock
