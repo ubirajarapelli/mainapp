@@ -21,6 +21,7 @@ class App extends Component {
             <div className="app">
                 <div id="main">
                     <button onClick={this.setTrayValue}>go To tray</button>
+                    <div id="cars-app" />
                 </div>
                 <div id="tray-app" />
             </div>
