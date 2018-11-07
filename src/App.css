@@ -7,3 +7,84 @@
     width: 29%;
     border-left: thin solid red;
 }
+
+
+nav {
+  display: flex;
+  width: 100%;
+  padding: 1rem .5rem;
+  background: #3658a4;
+}
+
+nav ul {
+  display: flex;
+  align-items: flex-end;
+}
+
+nav li {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 .5em;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #ffffff
+}
+
+.search-engine {
+  background-color: #f3da4d;
+}
+
+.sr-only {
+  display: none;
+}
+
+.search-engine .select {
+  border: none
+}
+
+.search-engine select {
+  background: transparent;
+}
+.search-engine option {
+  appearance: none;
+  background: #FFF;
+}
+
+.search-engine input[type="text"] {
+  background: #f5e589;
+  border: none;
+  color: #806e09;
+}
+
+.is-inline {
+  display: inline-flex;
+  align-items: flex-end;
+  width: 40%;
+  margin-bottom: 0;
+  padding: 0 1rem;
+}
+
+.is-inline-input {
+  width: 100%;
+  display: flex;
+  padding: .5rem 1rem;
+}
+
+.is-inline-input > .search-engine-input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: 0 .1rem;
+}
+
+.search-engine-input {
+  width: 20%;
+}
+
+.search-engine-input label {
+  display: block;
+}
