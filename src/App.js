@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './main.css';
 import './App.css';
+import './Result.css';
 
 class App extends Component {
     constructor(props) {
@@ -17,7 +18,6 @@ class App extends Component {
         window.dispatchEvent(event);
     }
 
-
     render(){
         return(
             <div className="app">
@@ -29,7 +29,9 @@ class App extends Component {
                   </ul>
                 </nav>
                 <div id="main">
-                    <div id="cars-app" />
+                <button onClick={this.setTrayValue}>send to tray</button>
+                    
+                    <div id="flight-app" />
                 </div>
                 <div id="tray-app" />
             </div>
