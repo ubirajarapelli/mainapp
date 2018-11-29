@@ -1,0 +1,19 @@
+section {
+    width: 100%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 25% 30% 40%;
+    background-color: gray;
+}
+
+.flight-result {
+    display: grid;
+    grid-template-columns: 25% 15% 15% 20% 20%;
+}
+
+.flight-details {
+    display: grid;
+    grid-template-columns: repeat(3);
+}
