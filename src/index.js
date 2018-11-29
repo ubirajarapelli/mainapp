@@ -6,10 +6,12 @@ import App from './App';
 import * as singleSpa from 'single-spa';
 import {registerTrayApp} from "./applications/tray-app";
 import {registerCarsApp} from "./applications/cars-app";
+import {registerFlightApp} from "./applications/flight-app";
 
 ReactDOM.render(<App/>,document.getElementById('root'));
 
-registerCarsApp();
+registerFlightApp();
+// registerCarsApp();
 registerTrayApp();
 
 // serviceWorker.unregister();
