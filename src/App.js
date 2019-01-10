@@ -4,6 +4,40 @@ import './main.css';
 import './App.css';
 import './Result.css';
 
+const navigateTo = url => window.history.pushState(null, null, url);
+
+class Menu extends Component {
+    constructor(props) {
+        super(props) 
+        this.state = {
+            pathname : window.location.pathname
+        }
+    }
+
+    handleMenuClick = () => {
+        this.setState(
+            () => ( {pathname : window.location.pathname} )
+        );
+    };
+
+    render() {
+        return (
+            <nav className="Menu" onClick={this.handleMenuClick}>
+                {this.props.children(this.state.pathname)}
+            </nav>
+        )
+    }
+}
+
+const MenuItem = ({link, children, pathname}) => {
+
+    return (
+        <li onClick={() => navigateTo(link)}>
+            {children}
+        </li>
+    );
+}
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -21,17 +55,20 @@ class App extends Component {
     render(){
         return(
             <div className="app">
-                <nav>
-                  <ul>
-                    <li><a href="">Menu</a></li>
-                    <li><a href="">Voos</a></li>
-                    <li><a href="">Carros</a></li>
-                  </ul>
-                </nav>
+                <Menu>
+                    {(pathname) => (
+                        <ul>
+                            <MenuItem pathname={pathname} link='/'>Home</MenuItem>
+                            <MenuItem pathname={pathname} link='/flight'>Voos</MenuItem>
+                            <MenuItem pathname={pathname} link='/cars'>Carros</MenuItem>
+                        </ul>
+                    )}
+                </Menu>
                 <div id="main">
                 <button onClick={this.setTrayValue}>send to tray</button>
                     
                     <div id="flight-app" />
+                    <div id="cars-app" />
                 </div>
                 <div id="tray-app" />
             </div>
