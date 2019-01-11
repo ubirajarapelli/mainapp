@@ -8,7 +8,7 @@ const navigateTo = url => window.history.pushState(null, null, url);
 
 class Menu extends Component {
     constructor(props) {
-        super(props) 
+        super(props)
         this.state = {
             pathname : window.location.pathname
         }
@@ -32,9 +32,9 @@ class Menu extends Component {
 const MenuItem = ({link, children, pathname}) => {
 
     return (
-        <li onClick={() => navigateTo(link)}>
+        <div onClick={() => navigateTo(link)}>
             {children}
-        </li>
+        </div>
     );
 }
 
@@ -57,16 +57,15 @@ class App extends Component {
             <div className="app">
                 <Menu>
                     {(pathname) => (
-                        <ul>
-                            <MenuItem pathname={pathname} link='/'>Home</MenuItem>
+                        <div>
+                            <MenuItem pathname={pathname} link='/flight'>Home</MenuItem>
                             <MenuItem pathname={pathname} link='/flight'>Voos</MenuItem>
                             <MenuItem pathname={pathname} link='/cars'>Carros</MenuItem>
-                        </ul>
+                        </div>
                     )}
                 </Menu>
                 <div id="main">
                 <button onClick={this.setTrayValue}>send to tray</button>
-                    
                     <div id="flight-app" />
                     <div id="cars-app" />
                 </div>

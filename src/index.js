@@ -11,7 +11,7 @@ import {registerFlightApp} from "./applications/flight-app";
 ReactDOM.render(<App/>,document.getElementById('root'));
 
 registerFlightApp();
-// registerCarsApp();
+registerCarsApp();
 registerTrayApp();
 
 // serviceWorker.unregister();
